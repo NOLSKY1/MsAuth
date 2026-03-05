@@ -7,7 +7,7 @@ namespace Ms_Auth.Repositories
     {
         public bool PersistUser(User user) {
             SqlConnection conn = new SqlConnection("data source= .\\Sqlexpress ;" +
-                "initial catalog = MsEx;" +
+                "initial catalog = todoMs;" +
                 "integrated security = true;" +
                 "encrypt = false;");
             conn.Open();
@@ -16,7 +16,7 @@ namespace Ms_Auth.Repositories
             cmd.Parameters.Add(new SqlParameter("@id", user.Id));
             cmd.Parameters.Add(new SqlParameter("@fullName", user.FullName));
             cmd.Parameters.Add(new SqlParameter("@email", user.Email));
-            cmd.Parameters.Add(new SqlParameter("@password", user.Password));
+            cmd.Parameters.Add(new SqlParameter("@password", user.HashedPassword));
             int isRowInserted = cmd.ExecuteNonQuery();
             conn.Close();
             return isRowInserted > 0;

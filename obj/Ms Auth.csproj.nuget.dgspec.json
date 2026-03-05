@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ULTRAPC\\source\\repos\\Ms Auth\\Ms Auth\\Ms Auth.csproj": {}
+    "C:\\Users\\Dell\\source\\repos\\MsAuth\\Ms Auth.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ULTRAPC\\source\\repos\\Ms Auth\\Ms Auth\\Ms Auth.csproj": {
+    "C:\\Users\\Dell\\source\\repos\\MsAuth\\Ms Auth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ULTRAPC\\source\\repos\\Ms Auth\\Ms Auth\\Ms Auth.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\MsAuth\\Ms Auth.csproj",
         "projectName": "Ms Auth",
-        "projectPath": "C:\\Users\\ULTRAPC\\source\\repos\\Ms Auth\\Ms Auth\\Ms Auth.csproj",
-        "packagesPath": "C:\\Users\\ULTRAPC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ULTRAPC\\source\\repos\\Ms Auth\\Ms Auth\\obj\\",
+        "projectPath": "C:\\Users\\Dell\\source\\repos\\MsAuth\\Ms Auth.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dell\\source\\repos\\MsAuth\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ULTRAPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

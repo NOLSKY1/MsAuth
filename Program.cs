@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Ms_Auth.Mappers;
+using Ms_Auth.Models;
 using Ms_Auth.Repositories;
 using Ms_Auth.Services;
 using Scalar.AspNetCore;
@@ -14,6 +16,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddScoped<UserMapper>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+builder.Services.AddScoped<IPasswordHasher<User> , PasswordHasher<User>>();
 builder.Services.Configure<ApiBehaviorOptions>(options =>
 {
     options.SuppressModelStateInvalidFilter = true;

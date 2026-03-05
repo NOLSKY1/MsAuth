@@ -1,4 +1,5 @@
-﻿using Ms_Auth.Dto;
+﻿using Microsoft.AspNetCore.Identity;
+using Ms_Auth.Dto;
 using Ms_Auth.Mappers;
 using Ms_Auth.Models;
 using Ms_Auth.Repositories;
@@ -9,16 +10,20 @@ namespace Ms_Auth.Services
     {
         private readonly IAuthRepository authRepository;
         private readonly UserMapper userMapper;
-        public AuthService(IAuthRepository authRepository , UserMapper userMapper)
+        private readonly IPasswordHasher<User> passwordHasher;
+        public AuthService(IAuthRepository authRepository , UserMapper userMapper , IPasswordHasher<User> passwordHasher)
         {
             this.authRepository = authRepository;
             this.userMapper = userMapper;
+            this.passwordHasher = passwordHasher;
+
         }
         public AuthResponse Register(RegisterDto dto)
         {
             User user = userMapper.RegisterDtoToUser(dto);
             user.Id = Guid.NewGuid().ToString();
-            if (!@authRepository.PersistUser(user))
+            user.HashedPassword = passwordHasher.HashPassword(user, dto.Password);
+            if (!authRepository.PersistUser(user))
             {
                 return null;
             }

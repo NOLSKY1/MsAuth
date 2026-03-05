@@ -11,7 +11,6 @@ namespace Ms_Auth.Mappers
             {
                 FullName = dto.FullName,
                 Email = dto.Email,
-                Password = dto.Password,
             };
         }
     }
