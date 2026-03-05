@@ -21,6 +21,30 @@ namespace Ms_Auth.Repositories
             conn.Close();
             return isRowInserted > 0;
         }
-
+        public User GetUSer(string email)
+        {
+            SqlConnection conn = new SqlConnection("data source= .\\Sqlexpress ;" +
+               "initial catalog = todoMs;" +
+               "integrated security = true;" +
+               "encrypt = false;");
+            conn.Open();
+            string query = "select * from users where email = @email";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.Add(new SqlParameter("@email", email));
+            SqlDataReader rd = cmd.ExecuteReader();
+            User user = null;
+            while (rd.Read())
+            {
+                user = new User
+                {
+                    Id = rd["id"].ToString(),
+                    FullName = rd["fullName"].ToString(),
+                    Email = rd["email"].ToString(),
+                    HashedPassword = rd["password"].ToString(),
+                };
+            }
+            conn.Close();
+            return user;
+        }
     }
 }

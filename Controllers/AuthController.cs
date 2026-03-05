@@ -14,7 +14,7 @@ namespace Ms_Auth.Controllers
         {
             this.authService = authService;
         }
-        [HttpPost]
+        [HttpPost("register")]
         public IActionResult Register(RegisterDto dto)
         {
             if (!ModelState.IsValid)
@@ -27,6 +27,20 @@ namespace Ms_Auth.Controllers
                 return StatusCode(500);
             }
             return StatusCode(201, response);
+        }
+        [HttpPost("login")]
+        public IActionResult Login(LoginDto dto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return UnprocessableEntity(ModelState);
+            }
+            AuthResponse response = authService.Login(dto);
+            if (response == null)
+            {
+                return Unauthorized("Invalid Credentials");
+            }
+            return Ok(response);
         }
     }
 }

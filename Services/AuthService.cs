@@ -23,7 +23,7 @@ namespace Ms_Auth.Services
             User user = userMapper.RegisterDtoToUser(dto);
             user.Id = Guid.NewGuid().ToString();
             user.HashedPassword = passwordHasher.HashPassword(user, dto.Password);
-            if (!authRepository.PersistUser(user))
+            if (!@authRepository.PersistUser(user))
             {
                 return null;
             }
@@ -32,6 +32,22 @@ namespace Ms_Auth.Services
                 Token = "naoufal.token.random"
             };
 
+        }
+        public AuthResponse Login(LoginDto dto)
+        {
+            User user = authRepository.GetUSer(dto.Email);
+            if(user == null)
+            {
+                return null;
+            }
+            PasswordVerificationResult result = passwordHasher.VerifyHashedPassword(user , user.HashedPassword , dto.Password);
+            if(result == PasswordVerificationResult.Failed)
+            {
+                return null;
+            }
+            return new AuthResponse {
+                Token = "abcd"
+            };
         }
     }
 }

@@ -1,8 +1,24 @@
 [
   {
     "ContainingType": "Ms_Auth.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Ms_Auth.Dto.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ms_Auth.Controllers.AuthController",
     "Method": "Register",
-    "RelativePath": "",
+    "RelativePath": "register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
