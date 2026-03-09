@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ms Auth")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd6a906b2053cd17a1ab1a79bef2563e6fbb3076")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd58bb78a93b4c69e724250c00b69ca2eb4e5ed7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ms Auth")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ms Auth")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

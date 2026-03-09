@@ -161,3 +161,4 @@ C:\Users\Dell\source\repos\MsAuth\obj\Debug\net9.0\refint\Ms Auth.dll
 C:\Users\Dell\source\repos\MsAuth\obj\Debug\net9.0\Ms Auth.pdb
 C:\Users\Dell\source\repos\MsAuth\obj\Debug\net9.0\Ms Auth.genruntimeconfig.cache
 C:\Users\Dell\source\repos\MsAuth\obj\Debug\net9.0\ref\Ms Auth.dll
+C:\Users\Dell\source\repos\MsAuth\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

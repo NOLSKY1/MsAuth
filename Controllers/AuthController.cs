@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Ms_Auth.Dto;
 using Ms_Auth.Services;
@@ -40,6 +41,13 @@ namespace Ms_Auth.Controllers
             {
                 return Unauthorized("Invalid Credentials");
             }
+            return Ok(response);
+        }
+        [HttpPost("change-password")]
+        [Authorize]
+        public IActionResult ChangePassword(string oldPassword , string newPassword)
+        {
+            var response = new { message = "Ur passowrd was successfully changed" };
             return Ok(response);
         }
     }

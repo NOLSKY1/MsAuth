@@ -1,6 +1,27 @@
 [
   {
     "ContainingType": "Ms_Auth.Controllers.AuthController",
+    "Method": "ChangePassword",
+    "RelativePath": "change-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oldPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "newPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Ms_Auth.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "login",
     "HttpMethod": "POST",
